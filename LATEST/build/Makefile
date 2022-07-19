@@ -149,12 +149,12 @@ CXX_INCLUDES         = -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_common             \
 
 $(VERBOSE).SILENT:
 
-all: Project_Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe
+all: Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe
 .PHONY : all
 
 clean:
-	rm $(CMAKE_BINARY_DIR)/Project_Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe
+	rm $(CMAKE_BINARY_DIR)/Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe
 .PHONY : clean
 
-Project_Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe:
-	$(CC) $(MAKESILENT) $(CXX_FLAGS) $(CXX_INCLUDES) -o $(CMAKE_BINARY_DIR)/Project_Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe $(CXX_SOURCES)
+Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe:
+	$(CC) $(MAKESILENT) $(CXX_FLAGS) $(CXX_INCLUDES) -o $(CMAKE_BINARY_DIR)/Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe $(CXX_SOURCES)
