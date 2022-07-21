@@ -20,7 +20,7 @@ default_target: all
 CC                   = g++
 CXX_DEFINES          = 
 CMAKE_BINARY_DIR     = .
-CMAKE_SOURCE_DIR     = ..
+CMAKE_SOURCE_DIR     = .
 $(VERBOSE)MAKESILENT = -s
 CXX_FLAGS            = -g -std=c++2a -Wall -Werror -Wextra -pedantic -Wuninitialized -std=gnu++20
 CXX_SOURCES          = $(CMAKE_SOURCE_DIR)/source/SmbLnk2_CfgGen/CfgGen.cpp                 \
