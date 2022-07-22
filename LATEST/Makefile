@@ -21,9 +21,9 @@ CC                   = g++
 CXX_DEFINES          = 
 CMAKE_BINARY_DIR     = .
 CMAKE_SOURCE_DIR     = .
-$(VERBOSE)MAKESILENT = -s
 CXX_FLAGS            = -g -std=c++2a -Wall -Werror -Wextra -pedantic -Wuninitialized -std=gnu++20
 CXX_SOURCES          = $(CMAKE_SOURCE_DIR)/source/SmbLnk2_CfgGen/CfgGen.cpp                 \
+                       $(CMAKE_SOURCE_DIR)/source/SmbLnk2_Const/Const.cpp                   \
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_CanIf/CanIf.cpp                   \
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_CanNm/CanNm.cpp                   \
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_CanSm/CanSm.cpp                   \
@@ -87,6 +87,7 @@ CXX_SOURCES          = $(CMAKE_SOURCE_DIR)/source/SmbLnk2_CfgGen/CfgGen.cpp     
 CXX_INCLUDES         = -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_common             \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_Compiler           \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_CfgGen             \
+                       -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_Const              \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_CanIf              \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_CanNm              \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_CanSm              \
@@ -147,8 +148,6 @@ CXX_INCLUDES         = -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_common             \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_SwcServiceOs       \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_SwcApplFoc         \
 
-$(VERBOSE).SILENT:
-
 all: Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe
 .PHONY : all
 
@@ -157,4 +156,4 @@ clean:
 .PHONY : clean
 
 Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe:
-	$(CC) $(MAKESILENT) $(CXX_FLAGS) $(CXX_INCLUDES) -o $(CMAKE_BINARY_DIR)/Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe $(CXX_SOURCES)
+	$(CC) $(CXX_FLAGS) $(CXX_INCLUDES) -o $(CMAKE_BINARY_DIR)/Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe $(CXX_SOURCES)
