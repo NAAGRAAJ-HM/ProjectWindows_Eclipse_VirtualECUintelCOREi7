@@ -85,6 +85,68 @@ CXX_SOURCES          = $(CMAKE_SOURCE_DIR)/source/SmbLnk2_CfgGen/CfgGen.cpp     
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_SwcServiceOs/SwcServiceOs.cpp     \
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_SwcApplFoc/SwcApplFoc.cpp         \
 
+CXX_OBJECTS          = $(CMAKE_BINARY_DIR)/CfgGen.o                            \
+                       $(CMAKE_BINARY_DIR)/Const.o                             \
+                       $(CMAKE_BINARY_DIR)/CanIf.o                             \
+                       $(CMAKE_BINARY_DIR)/CanNm.o                             \
+                       $(CMAKE_BINARY_DIR)/CanSm.o                             \
+                       $(CMAKE_BINARY_DIR)/CanTp.o                             \
+                       $(CMAKE_BINARY_DIR)/CryIf.o                             \
+                       $(CMAKE_BINARY_DIR)/Ea.o                                \
+                       $(CMAKE_BINARY_DIR)/EthIf.o                             \
+                       $(CMAKE_BINARY_DIR)/Fee.o                               \
+                       $(CMAKE_BINARY_DIR)/FrIf.o                              \
+                       $(CMAKE_BINARY_DIR)/FrTp.o                              \
+                       $(CMAKE_BINARY_DIR)/J1939Tp.o                           \
+                       $(CMAKE_BINARY_DIR)/LinIf.o                             \
+                       $(CMAKE_BINARY_DIR)/LinTp.o                             \
+                       $(CMAKE_BINARY_DIR)/MemIf.o                             \
+                       $(CMAKE_BINARY_DIR)/WdgIf.o                             \
+                       $(CMAKE_BINARY_DIR)/Adc.o                               \
+                       $(CMAKE_BINARY_DIR)/Can.o                               \
+                       $(CMAKE_BINARY_DIR)/Cry.o                               \
+                       $(CMAKE_BINARY_DIR)/Dio.o                               \
+                       $(CMAKE_BINARY_DIR)/Eep.o                               \
+                       $(CMAKE_BINARY_DIR)/Eth.o                               \
+                       $(CMAKE_BINARY_DIR)/Fls.o                               \
+                       $(CMAKE_BINARY_DIR)/Fr.o                                \
+                       $(CMAKE_BINARY_DIR)/Gpt.o                               \
+                       $(CMAKE_BINARY_DIR)/Icu.o                               \
+                       $(CMAKE_BINARY_DIR)/Lin.o                               \
+                       $(CMAKE_BINARY_DIR)/Mcu.o                               \
+                       $(CMAKE_BINARY_DIR)/Ocu.o                               \
+                       $(CMAKE_BINARY_DIR)/Port.o                              \
+                       $(CMAKE_BINARY_DIR)/Pwm.o                               \
+                       $(CMAKE_BINARY_DIR)/Spi.o                               \
+                       $(CMAKE_BINARY_DIR)/Wdg.o                               \
+                       $(CMAKE_BINARY_DIR)/BswM.o                              \
+                       $(CMAKE_BINARY_DIR)/Com.o                               \
+                       $(CMAKE_BINARY_DIR)/ComM.o                              \
+                       $(CMAKE_BINARY_DIR)/Csm.o                               \
+                       $(CMAKE_BINARY_DIR)/Dcm.o                               \
+                       $(CMAKE_BINARY_DIR)/Dem.o                               \
+                       $(CMAKE_BINARY_DIR)/Det.o                               \
+                       $(CMAKE_BINARY_DIR)/Dlt.o                               \
+                       $(CMAKE_BINARY_DIR)/EcuM.o                              \
+                       $(CMAKE_BINARY_DIR)/FiM.o                               \
+                       $(CMAKE_BINARY_DIR)/FrNm.o                              \
+                       $(CMAKE_BINARY_DIR)/IpduM.o                             \
+                       $(CMAKE_BINARY_DIR)/Nm.o                                \
+                       $(CMAKE_BINARY_DIR)/NvM.o                               \
+                       $(CMAKE_BINARY_DIR)/Os.o                                \
+                       $(CMAKE_BINARY_DIR)/PduR.o                              \
+                       $(CMAKE_BINARY_DIR)/SchM.o                              \
+                       $(CMAKE_BINARY_DIR)/SecOC.o                             \
+                       $(CMAKE_BINARY_DIR)/SokFm.o                             \
+                       $(CMAKE_BINARY_DIR)/StartUp.o                           \
+                       $(CMAKE_BINARY_DIR)/StbM.o                              \
+                       $(CMAKE_BINARY_DIR)/Vkms.o                              \
+                       $(CMAKE_BINARY_DIR)/WdgM.o                              \
+                       $(CMAKE_BINARY_DIR)/Rte.o                               \
+                       $(CMAKE_BINARY_DIR)/SwcServiceEcuM.o                    \
+                       $(CMAKE_BINARY_DIR)/SwcServiceOs.o                      \
+                       $(CMAKE_BINARY_DIR)/SwcApplFoc.o                        \
+
 CXX_INCLUDES         = -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_common             \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_Compiler           \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_CfgGen             \
@@ -149,7 +211,7 @@ CXX_INCLUDES         = -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_common             \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_SwcServiceOs       \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_SwcApplFoc         \
 
-CXX_OBJECTS = $(subst .cpp,.o,$(CXX_SOURCES))
+CXX_OBJECTS1 = $(subst .cpp,.o,$(CXX_SOURCES))
 
 all: Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe
 .PHONY : all
@@ -161,5 +223,5 @@ clean:
 %.o: %.cpp
 	$(CC) $(CXX_FLAGS) $(CXX_INCLUDES) -c $<
 
-Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe: $(CXX_OBJECTS)
+Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe: $(CXX_OBJECTS1)
 	$(CC) $(LDD_FLAGS) -o $(CMAKE_BINARY_DIR)/Windows10Home_Eclipse2022-06_PEAQc150_VirtualECU_intelCOREi7.exe $(CXX_OBJECTS)
