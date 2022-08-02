@@ -21,7 +21,7 @@ CC                   = g++
 CXX_DEFINES          = 
 CMAKE_BINARY_DIR     = .
 CMAKE_SOURCE_DIR     = .
-CXX_FLAGS            = -g -std=c++2a -Wall -Werror -Wextra -pedantic -Wuninitialized -std=gnu++20
+CXX_FLAGS            = -g -std=c++2a -std=gnu++20 -Wall -Werror -Wextra -pedantic -Wuninitialized
 LDD_FLAGS            = $(CXX_FLAGS)
 CXX_SOURCES          = $(CMAKE_SOURCE_DIR)/source/SmbLnk2_CfgGen/CfgGen.cpp                 \
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_Const/Const.cpp                   \
@@ -67,6 +67,7 @@ CXX_SOURCES          = $(CMAKE_SOURCE_DIR)/source/SmbLnk2_CfgGen/CfgGen.cpp     
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_Dlt/Dlt.cpp                       \
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_EcuM/EcuM.cpp                     \
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_FiM/FiM.cpp                       \
+                       $(CMAKE_SOURCE_DIR)/source/SmbLnk2_Fm/Fm.cpp                         \
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_FrNm/FrNm.cpp                     \
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_IpduM/IpduM.cpp                   \
                        $(CMAKE_SOURCE_DIR)/source/SmbLnk2_Nm/Nm.cpp                         \
@@ -129,6 +130,7 @@ CXX_OBJECTS          = $(CMAKE_BINARY_DIR)/CfgGen.o                            \
                        $(CMAKE_BINARY_DIR)/Dlt.o                               \
                        $(CMAKE_BINARY_DIR)/EcuM.o                              \
                        $(CMAKE_BINARY_DIR)/FiM.o                               \
+                       $(CMAKE_BINARY_DIR)/Fm.o                                \
                        $(CMAKE_BINARY_DIR)/FrNm.o                              \
                        $(CMAKE_BINARY_DIR)/IpduM.o                             \
                        $(CMAKE_BINARY_DIR)/Nm.o                                \
@@ -193,6 +195,7 @@ CXX_INCLUDES         = -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_common             \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_Dlt                \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_EcuM               \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_FiM                \
+                       -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_Fm                 \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_FrNm               \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_IpduM              \
                        -I$(CMAKE_SOURCE_DIR)/source/SmbLnk2_Nm                 \
