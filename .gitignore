@@ -11,4 +11,7 @@ _deps
 lib*
 m_*
 *.o
+.cproject
+.project
+.settings
 
