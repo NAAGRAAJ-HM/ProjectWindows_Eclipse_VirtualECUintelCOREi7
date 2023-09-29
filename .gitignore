@@ -1,8 +1,13 @@
+*.mot
+*.hex
+*.elf
+*.map
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
 Testing
+Makefile
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json
@@ -11,6 +16,7 @@ _deps
 lib*
 m_*
 *.o
+*.out
 .cproject
 .project
 .settings
