@@ -1,4 +1,36 @@
-cmake_minimum_required(VERSION 3.25.3)
+cmake_minimum_required(VERSION 3.28.0-rc5)
+
+SET(CMAKE_SYSTEM_PROCESSOR tc49x)
+SET(CMAKE_SYSTEM_NAME      Generic)
+
+SET(
+   compiler_flags
+
+   "-Ctc49x"
+   "--lsl-core=vtc"
+   "-Wa-gAHLs"
+   "--emit-locals=-equs,-symbols"
+   "-Wa-Ogs"
+   "-Wa--error-limit=42"
+   "--iso=11"
+   "--language=-gcc,-volatile,+strings,-kanji"
+   "--fp-model=2"
+   "--switch=auto"
+   "--align=0"
+   "--default-near-size=8"
+   "--default-a0-size=0"
+   "--default-a1-size=0"
+   "-O2"
+   "--tradeoff=4"
+   "--compact-max-size=200"
+   "-g"
+)
+
+SET(CMAKE_CXX_COMPILER     "cctc")
+SET(CMAKE_C_COMPILER       "cctc")
+
+SET(CMAKE_CXX_COMPILER_WORKS true)
+SET(CMAKE_C_COMPILER_WORKS   true)
 
 ################################################################################
 ## toolchain/<name_variant_comiler>.cmake
@@ -56,15 +88,16 @@ cmake_minimum_required(VERSION 3.25.3)
 ################################################################################
 
 project(
-   CLAR_LCI_SwcApplTpms_LATEST
+   SwcApplTpms_CLAR_LCI_LATEST
    VERSION 1.0
 )
 
-SET(CMAKE_CXX_STANDARD 20)
-SET(CMAKE_CXX_STANDARD_REQUIRED True)
-#target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17) #TBD: change to 2x/20 equivalant!
+#target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
 #target_link_libraries(${PROJECT_NAME} PRIVATE <EcuabHAL>)
 #target_link_options(${PROJECT_NAME} PRIVATE "LINKER: -Map=${CMAKE_CURRENT_BINARY_DIR}/$<CONFIG>/${PROJECT_NAME}.map" "--specs=nosys.specs")
+
+#SET(CMAKE_CXX_STANDARD 17)
+#SET(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_definitions(
    -g
