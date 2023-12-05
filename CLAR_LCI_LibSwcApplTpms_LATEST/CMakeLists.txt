@@ -184,7 +184,7 @@ add_library(
 #  ${PROJECT_SOURCE_DIR}/source/SwcApplTpms/SWC/Sources/JumpTable/JumpTable.c
    ${PROJECT_SOURCE_DIR}/source/Wrapper_HBG/Wrapper_HBG.cpp
    ${PROJECT_SOURCE_DIR}/source/Wrapper_HBG/Wrapper_HBG_CalPrm.cpp
-   ${PROJECT_SOURCE_DIR}/source/Wrapper_HBG/Wrapper_HBG_CalPrmNvmBlock.cpp
+#  ${PROJECT_SOURCE_DIR}/source/Wrapper_HBG/Wrapper_HBG_CalPrmNvmBlock.cpp
    ${PROJECT_SOURCE_DIR}/source/Wrapper_HBG/Wrapper_HBG_Ccm.cpp
    ${PROJECT_SOURCE_DIR}/source/Wrapper_HBG/Wrapper_HBG_CddData.cpp
    ${PROJECT_SOURCE_DIR}/source/Wrapper_HBG/Wrapper_HBG_DcmServices.cpp
